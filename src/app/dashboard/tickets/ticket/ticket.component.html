@@ -1,21 +1,17 @@
-<form>
+<form (ngSubmit)="onsubmit(titleInput.value, textInput.value)" #form>
   <p>
     <label>Title</label>
-    <input type="text" name="title">
+    <!-- #titleInput is a template variable -->
+    <input type="text" name="title" #titleInput />
   </p>
   <p>
     <label>Request</label>
-    <textarea type="text" name="request" rows="3"></textarea>
+    <textarea type="text" name="request" rows="3" #textInput></textarea>
   </p>
   <p>
     <button>
-      <span>
-        Submit
-      </span>
-      <span class="icon">
-        ✔
-      </span>
+      <span> Submit </span>
+      <span class="icon"> ✔ </span>
     </button>
   </p>
-
 </form>
